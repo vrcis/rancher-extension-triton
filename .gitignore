@@ -128,3 +128,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# yarn build-pkg (@rancher/shell/scripts/build-pkg.sh)
+dist-pkg
+
+.DS_Store
