@@ -1,10 +1,8 @@
 <script>
 import CreateEditView from '@shell/mixins/create-edit-view';
 import { LabeledInput } from '@components/Form/LabeledInput';
-// import { azureEnvironments } from '@shell/machine-config/azure';
-// import { parseAzureError } from '@shell/utils/azure';
 import LabeledSelect from '@shell/components/form/LabeledSelect';
-import FileSelector, { createOnSelected } from '@shell/components/form/FileSelector';
+import FileSelector from '@shell/components/form/FileSelector';
 import { base64Encode } from '@shell/utils/crypto';
 
 export default {
@@ -18,7 +16,7 @@ export default {
    async fetch() {
     this.driver = await this.$store.dispatch('rancher/find', {
       type: 'nodedriver',
-      name:   'triton'
+      name: 'triton'
     });
   },
 
@@ -56,55 +54,8 @@ export default {
       onKeyMaterialSelected(privateKey) {
          const encoded = base64Encode(privateKey);
          this.value.setData('keyMaterial', encoded);
-         // this.value.setData('keyMaterialDecoded', privateKey);
-         console.log('this.value', this.value);
-      },
-
-      // update() {
-      //    this.value.setData('ssh-publickey', this.username);
-      //    this.value.setData('ssh-privatekey', this.password);
-      // }
-  },
-
-   // methods: {
-      // async test() {
-      //    const {
-      //       account,
-      //       keyId,
-      //       keyMaterial,
-      //       url,
-      //       tlsInsecure
-      //    } = this.value.decodedData;
-
-      //    try {
-      //       await this.$store.dispatch('management/request', {
-      //          url: '/meta/aksCheckCredentials',
-      //          method: 'POST',
-      //          data: {
-      //             account,
-      //             keyId,
-      //             keyMaterial,
-      //             url,
-      //             tlsInsecure,
-      //          },
-      //          redirectUnauthorized: false,
-      //       });
-
-      //       return true;
-      //    } catch (e) {
-      //       if (e.error) {
-      //          // const parsed = parseAzureError(e.error);
-
-      //          // if (parsed) {
-      //             return { errors: [e.error] };
-      //          // }
-      //       }
-
-      //       // Can't parse error, so go with the generic 'auth failed' error message
-      //       return false;
-      //    }
-      // },
-   // },
+      }
+  }
 };
 </script>
 
@@ -156,12 +107,6 @@ export default {
                :label="t('generic.readFromFile')"
                @selected="onKeyMaterialSelected"
             />
-            <!-- <FileSelector
-                class="role-tertiary add mt-5"
-                :label="t('generic.readFromFile')"
-                :mode="mode"
-                @selected="value.setData('keyMaterial', $event)"
-              /> -->
          </div>
       </div>
    </section>
