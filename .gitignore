@@ -130,6 +130,11 @@ dist
 .pnp.*
 
 # yarn build-pkg (@rancher/shell/scripts/build-pkg.sh)
+# yarn publish-pkgs
 dist-pkg
+assets
+charts
+extensions
+index.yaml
 
 .DS_Store
