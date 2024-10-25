@@ -44,6 +44,8 @@ If building on a Mac with an Apple chip (`arm64`) you will need to manually add 
 ```
 ./node_modules/@rancher/shell/scripts/extension/helm/scripts/package
 ```
+If building on a Mac you will also need to work around https://github.com/rancher/dashboard/pull/12122.
+
 See https://extensions.rancher.io/extensions/publishing#manually-publishing-an-extension-catalog-image for details.
 
 ## Rancher Extension Links
