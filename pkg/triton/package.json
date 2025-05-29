@@ -3,12 +3,14 @@
   "label": "Triton",
   "description": "Triton plugin",
   "icon": "./triton.svg",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "rancher": {
     "annotations": {
-      "catalog.cattle.io/rancher-version": ">= v2.8.5",
-      "catalog.cattle.io/ui-extensions-version": ">= 1.2.0"
+      "catalog.cattle.io/kube-version": ">= 1.16.0-0",
+      "catalog.cattle.io/rancher-version": ">= v2.10.0",
+      "catalog.cattle.io/ui-extensions-version": ">= 3.0.0 < 4.0.0",
+      "catalog.cattle.io/ui-version": ">= 2.7.2"
     }
   },
   "scripts": {
@@ -19,9 +21,9 @@
     "node": ">=12"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "4.5.18",
-    "@vue/cli-service": "4.5.18",
-    "@vue/cli-plugin-typescript": "4.5.18"
+    "@vue/cli-plugin-babel": "5.0.8",
+    "@vue/cli-service": "5.0.8",
+    "@vue/cli-plugin-typescript": "5.0.8"
   },
   "browserslist": [
     "> 1%",

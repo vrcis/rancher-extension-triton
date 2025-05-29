@@ -9,14 +9,14 @@ Install `nvm`:
 brew install nvm
 ```
 
-Install Node.js version 16:
+Install Node.js version 20:
 ```bash
-nvm install 16
+nvm install 20
 ```
 
-Load Node.js version 16:
+Load Node.js version 20:
 ```bash
-nvm use 16
+nvm use 20
 ```
 
 Install dependencies:
