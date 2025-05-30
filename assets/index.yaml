@@ -1,0 +1,26 @@
+apiVersion: v1
+entries:
+  triton:
+  - annotations:
+      catalog.cattle.io/certified: rancher
+      catalog.cattle.io/kube-version: '>= 1.16.0-0'
+      catalog.cattle.io/namespace: cattle-ui-plugin-system
+      catalog.cattle.io/os: linux
+      catalog.cattle.io/permits-os: linux, windows
+      catalog.cattle.io/rancher-version: '>= v2.10.0'
+      catalog.cattle.io/scope: management
+      catalog.cattle.io/ui-component: plugins
+      catalog.cattle.io/ui-extensions-version: '>= 3.0.0 < 4.0.0'
+      catalog.cattle.io/ui-version: '>= 2.7.2'
+    apiVersion: v2
+    appVersion: 0.2.0
+    created: "2025-05-30T19:00:25.482149435Z"
+    description: Triton plugin
+    digest: 8ee013220aa247a805870664f37c082f534767377badd40d30af9499af6920c7
+    icon: ./triton.svg
+    name: triton
+    type: application
+    urls:
+    - assets/triton/triton-0.2.0.tgz
+    version: 0.2.0
+generated: "2025-05-30T19:00:25.481521341Z"
