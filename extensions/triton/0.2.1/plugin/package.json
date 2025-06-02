@@ -1,0 +1,21 @@
+{
+  "name": "triton",
+  "label": "Triton",
+  "description": "Triton plugin",
+  "icon": "https://raw.githubusercontent.com/vrcis/rancher-extension-triton/main/pkg/triton/triton.svg",
+  "version": "0.2.1",
+  "private": false,
+  "rancher": true,
+  "engines": {
+    "node": ">=12"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "5.0.8",
+    "@vue/cli-service": "5.0.8",
+    "@vue/cli-plugin-typescript": "5.0.8"
+  },
+  "files": [
+    "**/*"
+  ],
+  "main": "triton-0.2.1.umd.min.js"
+}
