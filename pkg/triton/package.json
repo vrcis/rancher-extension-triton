@@ -2,7 +2,7 @@
   "name": "triton",
   "label": "Triton",
   "description": "Triton plugin",
-  "icon": "./triton.svg",
+  "icon": "https://raw.githubusercontent.com/vrcis/rancher-extension-triton/main/pkg/triton/triton.svg",
   "version": "0.2.0",
   "private": false,
   "rancher": {
