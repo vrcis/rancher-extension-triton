@@ -35,6 +35,15 @@ yarn serve-pkgs
 ```
 
 ## Publishing the Extension
+### Automatic GitHub Publishing (preferred)
+1. Create a new `triton-{version}` git tag.
+   1. Ensure that this matches the version specified in both `package.json` files.
+2. Create a new `triton-{version}` release from the new tag.
+3. Let the `build-extension-charts` GitHub action run and complete.
+   1. Create an empty `gh-pages` branch for the build to be deployed to if it doesn't exist.
+   2. If not done already and once the build completes, add the GitHub repository as a Rancher Extension repository while specifying the `gh-pages` branch during configuration.
+4. Install/Update the Triton extension from the Extension page.
+
 ### Manually Publishing an Extension Catalog Image
 ```bash
 rm -rf assets charts extensions index.yaml dist-pkg 2>/dev/null
